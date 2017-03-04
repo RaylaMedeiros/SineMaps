@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SineMaps</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_lista_sine_cidades">ListaSineCidades</string>
 </resources>

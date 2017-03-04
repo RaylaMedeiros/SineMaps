@@ -28,4 +28,11 @@ public class MainActivity extends Activity {
         intent.putExtra(chave, "");
         startActivity(intent);
     }
+
+    public void maps(View view){
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+        String chave = "";
+        intent.putExtra(chave, "");
+        startActivity(intent);
+    }
 }

@@ -58,7 +58,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-        locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
+      /*  locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
 
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
@@ -94,10 +94,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         } else {
 
             showGPSDisabledAlertToUser();
-        }
+        }*/
     }
 
-    @Override
+    /*@Override
     public void onLocationChanged(Location location) {
 
         // Novas posições do GPS
@@ -259,7 +259,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             .position(ponto)
                             .title(sinesProximos.get(i)
                             .getNome())
-                            .icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_blue)));
+                            //.icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_blue))
+            );
 
             mMap.setMinZoomPreference(8);
 
@@ -267,6 +268,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
        /* LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));*/
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        */
     }
 }

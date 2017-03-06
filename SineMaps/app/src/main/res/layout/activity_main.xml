@@ -1,51 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".Activities.MainActivity"
-    android:weightSum="1">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".Activities.MainActivity">
 
     <TextView
-        android:layout_width="310dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Escolha dentre as opções abaixo"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_weight="0.15"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp" />
-
+        android:text="Escolha dentre as opções abaixo"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sines por Região"
-        android:onClick="sinesRegiao"
-        android:layout_marginBottom="94dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:onClick="sinesRegiao"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Listar Sines"
-        android:onClick="listarSines (MainActivity)"
-        android:layout_marginTop="36dp"
-        android:layout_below="@+id/button4"
-        android:layout_alignStart="@+id/textView" />
+        android:onClick="listarSines"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sines próximos à você"
-        android:onClick="maps"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="193dp" />
-
-
-
-
-</RelativeLayout>
+        android:onClick="maps"/>
+</LinearLayout>

@@ -16,9 +16,9 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
+import android.location.LocationListener;
 
 import com.google.android.gms.identity.intents.Address;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -32,9 +32,9 @@ import java.util.Locale;
 
 import br.edu.ifpb.sinemaps.R;
 
-public class MapsActivity extends FragmentActivity /*implements OnMapReadyCallback, LocationListener */{
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
 
-    /*private GoogleMap mMap;
+    private GoogleMap mMap;
     double latitude;
     double longitude;
     
@@ -56,8 +56,10 @@ public class MapsActivity extends FragmentActivity /*implements OnMapReadyCallba
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        //Inicializar comunicação com o módulo de GPS do dispositivo móvel.
         locationManager = (LocationManager) getSystemService(Service.LOCATION_SERVICE);
 
+        //Verificar permissões de acesso.
         if (ActivityCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this,
@@ -96,25 +98,25 @@ public class MapsActivity extends FragmentActivity /*implements OnMapReadyCallba
         longitude = location.getLongitude();
 
         // Recupera Logradouro
-        getAddressFromLocation(location, getApplicationContext(), new GeoCoderHandler());
-    }*/
-
-    /*@Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
+        //getAddressFromLocation(location, getApplicationContext(), new GeoCoderHandler());
     }
 
     @Override
-    public void onProviderEnabled(String provider) {
+    public void onStatusChanged(String s, int i, Bundle extras) {
     }
 
     @Override
-    public void onProviderDisabled(String provider) {
-        if (provider.equals(LocationManager.GPS_PROVIDER)) {
+    public void onProviderEnabled(String s) {
+    }
+
+    @Override
+    public void onProviderDisabled(String s) {
+        if (s.equals(LocationManager.GPS_PROVIDER)) {
             showGPSDisabledAlertToUser();
         }
-    }*/
+    }
 
-    /*@Override
+    @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         if (requestCode == REQUEST_LOCATION) {
             if (grantResults.length == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -144,7 +146,7 @@ public class MapsActivity extends FragmentActivity /*implements OnMapReadyCallba
         alert.show();
     }
 
-    public static void getAddressFromLocation(final Location location,
+    /*public static void getAddressFromLocation(final Location location,
                                               final Context context,
                                               final Handler handler){
 
@@ -218,12 +220,12 @@ public class MapsActivity extends FragmentActivity /*implements OnMapReadyCallba
      * it inside the SupportMapFragment. This method will only be triggered once the user has
      * installed Google Play services and returned to the app.
      */
-    /*@Override
+    @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-    }*/
+    }
 }

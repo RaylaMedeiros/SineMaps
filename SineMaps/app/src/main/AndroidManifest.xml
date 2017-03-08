@@ -13,22 +13,23 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/iconMaps"
+        android:icon="@drawable/iconmaps"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".Activities.MainActivity">
+            android:name=".Activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.ListaSineActivity" />
         <activity android:name=".Activities.SineRegiaoActivity" />
         <activity android:name=".Activities.ListaSineCidadesActivity" />
         <activity android:name=".Activities.MapsActivity"
-                  android:label="SineMaps"/>
+            android:label="SineMaps"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -24,14 +24,14 @@ public class ListaSineCidadesActivity extends Activity {
     List<Sine> sineRegiao;
     ArrayAdapter<Sine> adaptador;
 
-    Intent intent = getIntent();
-
-    String latitude = intent.getStringExtra("Lat"), longitude = intent.getStringExtra("Long");
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_sine_cidades);
+
+        Bundle bundle = getIntent().getExtras();
+
+        String latitude = bundle.getString("Lat"), longitude = bundle.getString("Long");
 
         lvSinesProximos = (ListView) findViewById(R.id.lvSinesProximos);
         SineAsyncTask processo = new SineAsyncTask();

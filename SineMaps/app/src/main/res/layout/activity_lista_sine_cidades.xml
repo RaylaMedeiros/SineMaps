@@ -7,14 +7,8 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="432dp"
+        android:layout_height="wrap_content"
         android:id="@+id/lvSinesProximos">
     </ListView>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/splashimagem"
-        android:id="@+id/imageView4" />
 
 </LinearLayout>

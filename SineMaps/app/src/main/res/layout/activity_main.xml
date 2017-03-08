@@ -13,8 +13,6 @@
         android:layout_height="wrap_content"
         android:text="Escolha entre as opções abaixo"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button11"
         android:textStyle="normal|bold"
         android:textAlignment="center" />
 
@@ -22,32 +20,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Listar Sines"
-        android:onClick="listarSines"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="13dp" />
+        android:onClick="listarSines"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sines por Região"
-        android:onClick="sinesRegiao"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:onClick="sinesRegiao"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sines próximos à você"
-        android:onClick="maps"
-        android:layout_marginTop="44dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/splashimagem"
-        android:id="@+id/imageView" />
+        android:onClick="maps"/>
 
 </LinearLayout>

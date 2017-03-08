@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.Splash"
+    tools:context=".activities.SplashActivity"
     android:background="#245eca">
 
     <ImageView
@@ -12,5 +12,5 @@
         android:id="@+id/imageView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/splashImagem" />
+        android:background="@drawable/splashimagem" />
 </RelativeLayout>

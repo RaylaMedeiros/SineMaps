@@ -35,4 +35,11 @@ public class MainActivity extends Activity {
         intent.putExtra(chave, "");
         startActivity(intent);
     }
+
+    public void buscarSines(View view){
+        Intent intent = new Intent(MainActivity.this, BuscarSinesActivity.class);
+        String chave = "";
+        intent.putExtra(chave, "");
+        startActivity(intent);
+    }
 }

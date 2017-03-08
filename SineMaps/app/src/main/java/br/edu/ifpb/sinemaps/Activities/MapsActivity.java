@@ -225,8 +225,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_blue)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng ifpb = new LatLng(-7.2397862, -35.9156069);
+        mMap.addMarker(new MarkerOptions().position(ifpb).title("IFPB - CG").icon(BitmapDescriptorFactory.fromResource(R.drawable.icon_blue)));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(ifpb));
     }
 }

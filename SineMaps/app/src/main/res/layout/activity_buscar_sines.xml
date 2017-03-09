@@ -16,11 +16,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Procurar"
         android:onClick="buscarSinesCod"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ListView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/sine"/>
+        android:id="@+id/sine">
+    </ListView>
 
 </LinearLayout>

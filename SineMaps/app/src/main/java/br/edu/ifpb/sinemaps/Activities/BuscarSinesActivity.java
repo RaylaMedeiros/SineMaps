@@ -37,7 +37,7 @@ public class BuscarSinesActivity extends Activity {
 
     public void buscarSinesCod(View view){
 
-        String cod = codPosto.toString();
+        String cod = codPosto.getText().toString();
 
         try {
             listaSine.addAll(new SineAsyncTask().execute("http://mobile-aceite.tcu.gov.br/mapa-da-saude/rest/emprego/cod/"+cod).get());
